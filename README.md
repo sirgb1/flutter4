@@ -1,5 +1,5 @@
 # Общая демонстрация функционала
-![ezgif-5-851973f8b3](https://github.com/sirgb1/flutter4/assets/96747393/09496b01-5329-4880-a5bf-4f4a24270d8b)
+![ezgif-5-e5292902c5](https://github.com/sirgb1/flutter4/assets/96747393/8d1ea393-66d0-4a98-9e3e-4131a490069e)
 
 # Главная страница
 ![image](https://github.com/sirgb1/flutter4/assets/96747393/8af3bee0-08dc-425c-907b-a1404bb1d6ee)
