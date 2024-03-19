@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application4/cart.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
 class ProductCard extends StatelessWidget {
+  final int id;
   final String title;
   final String price;
   final String imageUrl1;
@@ -12,6 +14,7 @@ class ProductCard extends StatelessWidget {
 
   const ProductCard({
     super.key,
+    required this.id,
     required this.title,
     required this.price,
     required this.imageUrl1,
@@ -29,6 +32,7 @@ class ProductCard extends StatelessWidget {
           context,
           MaterialPageRoute(
             builder: (context) => DetailedCard(
+              id: id,
               imageUrl1: imageUrl1,
               imageUrl2: imageUrl2,
               imageUrl3: imageUrl3,
@@ -88,6 +92,7 @@ class ProductCard extends StatelessWidget {
 
 List<ProductCard> carList = [
   const ProductCard(
+    id: 1,
     title: 'Lada (ВАЗ) 2121 (4x4)',
     price: '750 000 ₽',
     imageUrl1: 'https://avatars.mds.yandex.net/get-autoru-vos/11396317/b8c47ea92cd535e3424ac8b7c74c80eb/456x342n',
@@ -95,8 +100,9 @@ List<ProductCard> carList = [
     imageUrl3: 'https://yastatic.net/naydex/autoru/1UY5JP044/96dde5Vr4ND/b1ODDax8AgAsGDxsGIHEYDBFXERuHuo8baYDq0SzJgRipt46SrfJaTydBCF0Gk_iRWrwLj7DzxPeC3Mv0mhDU3kWV8h8ugABvF66rA5TEXK30tsXKcso9rEuDqbIvG_dbu9RadumnmztjJ-7d9GVu9-7Lia3Sx7MwVZt6kAxAkzkW4VDqGuNAWUDN2ceTcMr7gidib0TaDQzbItoyj3t3OlpkOCSaJm0Y80ZtiLYULtcda9j9U6fB0-TLi9Ad0WD5Q',
     description: 'Продаю Lada (ВАЗ) 2121 4x4, цвет фиолетовый, 2019 года выпуска, с пробегом 17 800 километров. В ПТС два собственника. Объем двигателя 1,7 литра, мощность 83 лошадиных силы. Автомобиль в отличном состоянии, не требует никаких дополнительных вложений. Без ДТП. Использовался исключительно не в городской среде, эксплуатируется крайне редко. Второй автомобиль. Готов ответить на все вопросы по телефону или при личной встрече. Звоните!',
     videoUrl: 'https://youtu.be/vuhvdBexD2U?si=Ek8qkj9j4qcoABSF',
-    ),
+  ),
   const ProductCard(
+    id: 2,
     title: 'Lada (ВАЗ) Granta, 2023',
     price: '1 040 000 ₽',
     imageUrl1: 'https://avatars.mds.yandex.net/get-autoru-vos/11025717/6c733f19f80483698546fc68a7d7798d/1200x900n',
@@ -106,6 +112,7 @@ List<ProductCard> carList = [
     videoUrl: 'https://youtu.be/Wk5XTGyTemw?si=SmlCDRnmqTENT_jR',
   ),
   const ProductCard(
+    id: 3,
     title: 'Lada (ВАЗ) Granta, 2019',
     price: '670 000 ₽',
     imageUrl1: 'https://yastatic.net/naydex/autoru/25jb8Dp31/bbad79QX41y/nwXnjHoFNny4bR_qK4f8Ec5MiyIKl9S8N0BPqmdENRAd2kE0kg3aoPakBFao2TJE-2SE4NW83IL8eNYrw1oYo1_Vs13owuDpaGpYK3vSqcPJyRwzDVWaNuxIQmCvTDoKkhIFogOaXLAmf18VbJBwknH9myUWKoaWbHzOP08EAzveDemC_dO3uXb_0yGkRDgeUUJHaxNbXnmhgs4nKsl7x5YRyO1PUA296P7TSGOdM1c-vxzrFuHMECEzA77FBo66E0',
@@ -115,6 +122,7 @@ List<ProductCard> carList = [
     videoUrl: 'https://youtu.be/OH6Lhd5DbZw?si=xoVypI9hsIE-5-05',
   ),
   const ProductCard(
+    id: 4,
     title: 'Lada (ВАЗ) 2107, 2007',
     price: '130 000 ₽',
     imageUrl1: 'https://avatars.mds.yandex.net/get-autoru-vos/1595794/cfd6d922f5664652a52f2601d7977a31/1200x900n',
@@ -124,6 +132,7 @@ List<ProductCard> carList = [
     videoUrl: 'https://youtu.be/cWdJnEtiyOI?si=irPsdLHj_6Zz54XP',
   ),
   const ProductCard(
+    id: 5,
     title: 'Lada (ВАЗ) Vesta SW, 2021',
     price: '1 499 000 ₽',
     imageUrl1: 'https://yastatic.net/naydex/autoru/25jb8Dp31/bbad79QX41y/nwXnjHoFNny4bR_qK4f8Ec5MiyIKl9S8N0BPqmdENRAd2kE0k81aoLdkRda8jPJT7HER4IJo3JR8L5V_QxhbIwkAs8g_wLS96SoZf_vSqcPJyRwzDVWaNuxIQmCvTDoKkhIFogOaXLAmf18VbJBwknH9myUWKoaWbHzOP08EAzveDemC_dO3uXb_0yGkRDgeUUJHaxNbXnmhgs4nKsl7x5YRyO1PUA296P7TSGOdM1c-vxzrFuHMECEzA77FBo66E0',
@@ -133,6 +142,7 @@ List<ProductCard> carList = [
     videoUrl: 'https://youtu.be/grScH3F70Xo?si=jJR7Xf_21_uWrutE',
   ),
   const ProductCard(
+    id: 6,
     title: 'Lada (ВАЗ) Vesta CNG, 2019',
     price: '725 000 ₽',
     imageUrl1: 'https://yastatic.net/naydex/autoru/25jb8Dp31/bbad79QX41y/nwXnjHoFNny4bR_qK4f8Ec5MiyIKl9S8N0BPqmdENRAd2kE0ks_aoHekxZa9zyfErDAF4dT9yYDo7NV-F40Y95_BcwhqQ-NrqCpYvjvSqcPJyRwzDVWaNuxIQmCvTDoKkhIFogOaXLAmf18VbJBwknH9myUWKoaWbHzOP08EAzveDemC_dO3uXb_0yGkRDgeUUJHaxNbXnmhgs4nKsl7x5YRyO1PUA296P7TSGOdM1c-vxzrFuHMECEzA77FBo66E0',
@@ -142,6 +152,7 @@ List<ProductCard> carList = [
     videoUrl: 'https://youtu.be/oMT8dpz6Z6k?si=EKCqdFAdL4SGysTA',
   ),
   const ProductCard(
+    id: 7,
     title: 'Lada (ВАЗ) Vesta Cross, 2023',
     price: '1 758 800 ₽',
     imageUrl1: 'https://avatars.mds.yandex.net/get-autoru-vos/2163155/0c56469e90d792db113817da519ae56c/1200x900n',
@@ -151,6 +162,7 @@ List<ProductCard> carList = [
     videoUrl: 'https://youtu.be/B1sk6Esx0Iw?si=OX7l1maEYQ13HpS2',
   ),
   const ProductCard(
+    id: 8,
     title: 'Lada (ВАЗ) XRAY, 2016',
     price: '789 000 ₽',
     imageUrl1: 'https://avatars.mds.yandex.net/get-autoru-vos/1681159/c30b84c65ce4e61e7256848d1c92ded0/1200x900n',
@@ -160,6 +172,7 @@ List<ProductCard> carList = [
     videoUrl: 'https://youtu.be/5_N3rP9_F3w?si=2V05GSWw_j5exzMB',
   ),
   const ProductCard(
+    id: 9,
     title: 'Lada (ВАЗ) 2114, 2005',
     price: '85 000 ₽',
     imageUrl1: 'https://avatars.mds.yandex.net/get-autoru-vos/8381424/4c0f213cfc46ebbc9dcaaa7d03c93644/1200x900n',
@@ -169,6 +182,7 @@ List<ProductCard> carList = [
     videoUrl: 'https://youtu.be/xQdtUsfZHEA?si=14RhmrqhDEh1ViuZ',
   ),
   const ProductCard(
+    id: 10,
     title: 'Lada (ВАЗ) Vesta, 2021',
     price: '1 195 000 ₽',
     imageUrl1: 'https://yastatic.net/naydex/autoru/25jb8Dp31/bbad79QX41y/nwXnjHoFNny4bR_qK4f8Ec5MiyIKl9S8N0BPqmdENRAd2kE0ks_bIXZkBFa82GeErGUQNFW9iFXo79Y_wpgZYR4B8Z1og7RofSpP6_vSqcPJyRwzDVWaNuxIQmCvTDoKkhIFogOaXLAmf18VbJBwknH9myUWKoaWbHzOP08EAzveDemC_dO3uXb_0yGkRDgeUUJHaxNbXnmhgs4nKsl7x5YRyO1PUA296P7TSGOdM1c-vxzrFuHMECEzA77FBo66E0',
@@ -181,6 +195,7 @@ List<ProductCard> carList = [
 
 
 class DetailedCard extends StatelessWidget {
+  final int id;
   final String title;
   final String price;
   final String imageUrl1;
@@ -191,6 +206,7 @@ class DetailedCard extends StatelessWidget {
 
   const DetailedCard({
     super.key,
+    required this.id,
     required this.title,
     required this.price,
     required this.imageUrl1,
@@ -210,26 +226,57 @@ class DetailedCard extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Text(
-                title,
-                style: const TextStyle(
-                  fontSize: 24.0,
-                  fontWeight: FontWeight.bold,
+            Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Column(
+                  children: [
+                    Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Text(
+                      title,
+                      style: const TextStyle(
+                        fontSize: 24.0,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                   ),
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Text(
+                        price,
+                        style: const TextStyle(
+                          fontSize: 24.0,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.green,
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 8.0),
-              child: Text(
-                price,
-                style: const TextStyle(
-                  fontSize: 20.0,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.green,
-                ),
-              ),
+                Column(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.all(1.0),
+                        child: ElevatedButton(
+                          onPressed: () {
+                            cart.add(carList[id]);
+                          },
+                          child: const Icon(Icons.add_shopping_cart_outlined, semanticLabel: 'Добавить в корзину',),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(1.0),
+                        child: ElevatedButton(
+                          onPressed: () {
+                            favorite.add(carList[id]);
+                          },
+                          child: const Icon(Icons.favorite, semanticLabel: 'Добавить в избранное',)
+                        )
+                      )
+                    ]
+                )
+              ],
             ),
             SingleChildScrollView(
               scrollDirection: Axis.horizontal,
